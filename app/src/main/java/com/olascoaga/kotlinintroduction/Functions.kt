@@ -16,6 +16,11 @@ fun main() {
     println(c.enableAbs(false))
     println("$b + $c = ${add(b, c)}")
     println("$b + $c = ${add(b, c.enableAbs(true))}")
+
+    createNewTopic("Parameter overloading")
+    showProduct("Soda", "13%")
+    showProduct(name = "Bread")
+    showProduct("Candy", "15%", "March 15")
 }
 
 private fun sayHello() {
@@ -29,3 +34,11 @@ private fun add(a: Int, b: Int): Int {
 private fun sub(a: Int, b: Int) = a - b
 
 fun Int.enableAbs(enable: Boolean) = if (enable) abs(this) else this
+
+fun showProduct(name: String, promo: String, validity: String = "while supplies last") {
+    println("$name = $promo $validity")
+}
+
+fun showProduct(name: String) {
+    println("$name = There's no promotion")
+}

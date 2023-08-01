@@ -21,6 +21,9 @@ fun main() {
     showProduct("Soda", "13%")
     showProduct(name = "Bread")
     showProduct("Candy", "15%", "March 15")
+
+    createNewTopic("Assignment")
+    printApples(13)
 }
 
 private fun sayHello() {
@@ -41,4 +44,8 @@ fun showProduct(name: String, promo: String, validity: String = "while supplies 
 
 fun showProduct(name: String) {
     println("$name = There's no promotion")
+}
+
+fun printApples(quantity: Int) {
+    print("I have $quantity apples")
 }

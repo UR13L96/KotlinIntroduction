@@ -21,7 +21,21 @@ fun showUsers(vararg users: String) {
     createNewTopic("While")
     var i = 0
     while (i < users.size) {
+        if (users[i] == "Nadia") {
+            println("The user is ${users[i]}")
+        }
         println(users[i])
         i++
+    }
+
+    createNewTopic("When")
+    i = (users.indices).random()
+    when (users[i]) {
+        "Nadia" -> println("The user is Nadia")
+        "Sergio" -> {
+            println("Go to next screen")
+            println(13)
+        }
+        else -> println(users[i])
     }
 }

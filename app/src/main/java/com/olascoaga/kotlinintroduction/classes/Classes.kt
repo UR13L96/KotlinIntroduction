@@ -23,4 +23,21 @@ fun main() {
 
     val friend = brother.copy(id = 2, group = Group.FRIENDS.ordinal)
     println(friend)
+
+    createNewTopic("Scope functions")
+    with(smartphone) {
+        println("Private? $isPrivate")
+        call()
+    }
+
+    friend.group = Group.WORK.ordinal
+    friend.name = "Wendy"
+    friend.lastName = "Guevara"
+
+    friend.apply {
+        group = Group.WORK.ordinal
+        name = "Wendy"
+        lastName = "Guevara"
+    }
+    println(friend)
 }

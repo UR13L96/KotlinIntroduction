@@ -37,4 +37,26 @@ fun main() {
     usersSelectedList.add(user)
     usersSelectedList.add(user)
     println(usersSelectedList)
+
+    createNewTopic("Collections (Map)")
+    val usersMap = mutableMapOf<Int, User>()
+    println(usersMap)
+
+    usersMap[user.id.toInt()] = user
+    usersMap[user.id.toInt()] = user
+    println(usersMap)
+
+    usersMap[friend.id.toInt()] = friend
+    println(usersMap)
+
+    usersMap.remove(2)
+    println(usersMap)
+    println(usersMap.isEmpty())
+    println(usersMap.contains(0))
+
+    usersMap[brother.id.toInt()] = brother
+    usersMap[friend.id.toInt()] = friend
+    println(usersMap)
+    println(usersMap.keys)
+    println(usersMap.values)
 }
